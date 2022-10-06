@@ -168,11 +168,10 @@ footer .footer-links span{
     background-color: var(--color-primary);
     width: 17%;
     left: 0;
-    box-shadow: 0 -2px 5px 8px var(--color-box-shadows);
     z-index: -1;
     display: grid;
     padding: 8px 30px;
-    transition: 500ms ease-in;
+    transition: 500ms;
 }
 
 .modal .close-container{
