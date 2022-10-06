@@ -12,7 +12,7 @@
     --color-primary: rgb(241, 238, 238);
     --color-secondary: #333;
     --color-logo: rgb(231, 107, 58);
-    --color-box-shadows: rgba(17, 2, 2, 0.034);
+    --color-box-shadows: rgba(17, 2, 2, 0.103);
     --color-pure-white: #fff;
     --color-button: rgb(231, 107, 58);
     --color-links: rgb(37, 1, 1);
@@ -167,12 +167,41 @@ footer .footer-links span{
     position: absolute;
     background-color: var(--color-primary);
     width: 17%;
-    left: 16%;
+    left: 0;
     box-shadow: 0 -2px 5px 8px var(--color-box-shadows);
-    z-index: 2;
+    z-index: -1;
     display: grid;
-    padding: 15px;
+    padding: 8px 30px;
+    transition: 500ms ease-in;
 }
+
+.modal .close-container{
+    position: relative;
+}
+
+.modal .close-button {
+    position: absolute;
+    right: -10px;
+    color: var(--color-primary);
+    top: 0;
+    font-size: 2.0rem;
+    cursor: pointer;
+    background-color: var(--color-button);
+    padding: 0 8px;
+    border-radius: 50%;
+}
+
+.modal a{
+    text-decoration: none;
+    font-size: .8rem;
+    color: var(--color-links);
+}
+
+
+.modal h2{
+    display: none;
+}
+
 
 .main-container {
     position: absolute;
