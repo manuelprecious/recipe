@@ -22,6 +22,7 @@
 body {
     background: var(--color-primary);
     width: 100vw;
+    overflow: hidden;
 }
 
 li {
@@ -35,7 +36,7 @@ button {
     padding: 8px;
     background-color: var(--color-button);
     color: var(--color-primary);
-
+    cursor: pointer;
 }
 
 .left-side {
@@ -44,6 +45,7 @@ button {
     position: fixed;
     width: 17%;
     box-shadow: 0 -2px 5px 8px var(--color-box-shadows);
+    z-index: 2;
 }
 
 /*Aligning div items inside the sidebar*/
@@ -169,7 +171,7 @@ footer .footer-links span{
     background-color: var(--color-primary);
     width: 17%;
     left: 0;
-    z-index: -1;
+    z-index: 1;
     display: grid;
     padding: 8px 30px;
     transition: 500ms;
@@ -210,7 +212,7 @@ footer .footer-links span{
     background-size: cover;
     position: relative;
     border-radius: 0 0 29% 29%;
-    z-index: -2;
+    z-index: -5;
 }
 
 .recipe-header .overlay{
@@ -218,7 +220,7 @@ footer .footer-links span{
     background-color: var(--color-img-overlays);
     width: 100%;
     height: 100vh;
-    z-index: -1;
+    z-index: -4;
 }
 
 /*Styling header elements*/
@@ -234,6 +236,13 @@ footer .footer-links span{
     border-radius: 15px;
     margin-top: 2rem;
     box-shadow: var(--color-box-shadows);
+    cursor: pointer;
+}
+
+.header-elements div section{
+    color: var(--color-button);
+    text-align: center;
+    line-height: 2;
 }
 
 .header-elements{
@@ -241,6 +250,79 @@ footer .footer-links span{
     height: 100%;
     display: grid;
     justify-items: center;
+}
+
+/*header elements buttons*/
+.header-elements .carousel-btn{
+    padding: 10px 25px;
+}
+
+
+/*Header search bar*/
+.search-modal {
+    height: 100vh;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.473);
+    width: 100%;
+    left: 0%;
+    z-index: -1;
+    display: grid;
+    transition: 500ms;
+}
+
+.search-modal form {
+    background: rgb(255, 255, 255);
+    height: 65%;
+    position: relative;
+    left: 14%;
+    width: 86%;
+    padding: 2rem 6rem;
+    display: grid;
+    align-items: flex-end;
+}
+
+.search-modal form .search-bar{
+    width: 50%;
+    border: none;
+    outline: none;
+    box-shadow: 0 0 5px 5px var(--color-box-shadows);
+    margin: 0 30%;
+    display: flex;
+    gap: 5px;
+    padding: 0 20px;
+    border-radius: 10px;
+
+}
+
+.search-modal form .search-bar input{
+    outline: none;
+    border: none;
+    width: 80%;
+}
+
+.search-modal form div *{
+    line-height: 2;
+}
+
+.search-modal form div .search-recent{
+    margin: 0 10%;
+    color: rgba(51, 51, 51, 0.466);
+}
+
+.search-modal form div .search-recent span{
+    color: var(--color-links);
+}
+
+.search-modal form .more-search-details span{
+    color: green;
+}
+
+.search-modal form button{
+    display: inline;
+}
+
+.search-modal form .more-search-details{
+    padding: 0 150px;
 }
 
 .main-container {
