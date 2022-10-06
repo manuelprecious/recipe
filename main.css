@@ -90,8 +90,16 @@ button {
 }
 
 .right-side .side-holder .holder-2 nav p{
-    line-height: 4;
+    line-height: 2.5;
     font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.right-side .side-holder .holder-2 nav p span{
+    color: green;
+    font-size: 1.5rem;
 }
 
 .right-side .side-holder .holder-2 nav ul li a{
@@ -150,10 +158,25 @@ footer .footer-links span{
     left: 10%;
     top: 25%;
     word-spacing: 2px;
+
+}
+
+/*Designing the modal element for the more button*/
+.modal {
+    height: 100vh;
+    position: absolute;
+    background-color: var(--color-primary);
+    width: 17%;
+    left: 16%;
+    box-shadow: 0 -2px 5px 8px var(--color-box-shadows);
+    z-index: 2;
+    display: grid;
+    padding: 15px;
 }
 
 .main-container {
     position: absolute;
     left: 18%;
     width: 80%;
+    z-index: -2;
 }
