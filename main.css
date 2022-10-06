@@ -29,6 +29,10 @@ li {
     list-style-type: none;
 }
 
+h2 {
+    font-size: 2rem;
+}
+
 button {
     outline: none;
     border: none;
@@ -279,6 +283,7 @@ footer .footer-links span{
     padding: 2rem 6rem;
     display: grid;
     align-items: flex-end;
+    transition: 5000ms;
 }
 
 .search-modal form .search-bar{
