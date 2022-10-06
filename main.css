@@ -16,6 +16,7 @@
     --color-pure-white: #fff;
     --color-button: rgb(231, 107, 58);
     --color-links: rgb(37, 1, 1);
+    --color-img-overlays: rgba(221, 221, 221, 0.89);
 }
 
 body {
@@ -37,7 +38,7 @@ button {
 
 }
 
-.right-side {
+.left-side {
     height: 100vh;
     background-color: var(--color-pure-white);
     position: fixed;
@@ -52,19 +53,19 @@ button {
     height: 100%;
 }
 
-.right-side .side-holder .side-content-holders{
+.left-side .side-holder .side-content-holders{
     padding: 10px;
     width: 100%;
 }
 
-.right-side .side-holder .holder-1,
-.right-side .side-holder .holder-3{
+.left-side .side-holder .holder-1,
+.left-side .side-holder .holder-3{
     position: absolute;
     padding: 25px 10px 0px;
     height: 30%;
 }
 
-.right-side .side-holder .holder-1 h1{
+.left-side .side-holder .holder-1 h1{
     color: var(--color-logo);
     display: flex;
     flex-direction: column;
@@ -76,20 +77,20 @@ button {
 }
 
 /* The menu section on the left sidebar*/
-.right-side .side-holder .holder-2{
+.left-side .side-holder .holder-2{
     position: relative;
     top: 30%;
     height: 40%;
     overflow-y: scroll;
 }
 
-.right-side .side-holder .holder-2 nav{
+.left-side .side-holder .holder-2 nav{
     font-size: 0.8rem;
     margin-left: 30px;
     line-height: 2;  
 }
 
-.right-side .side-holder .holder-2 nav p{
+.left-side .side-holder .holder-2 nav p{
     line-height: 2.5;
     font-weight: bold;
     display: flex;
@@ -97,30 +98,30 @@ button {
     gap: 10px;
 }
 
-.right-side .side-holder .holder-2 nav p span{
+.left-side .side-holder .holder-2 nav p span{
     color: green;
     font-size: 1.5rem;
 }
 
-.right-side .side-holder .holder-2 nav ul li a{
+.left-side .side-holder .holder-2 nav ul li a{
     text-decoration: none;
     color: var(--color-links);
 }
 
-.right-side .side-holder .holder-2 nav ul li span{
+.left-side .side-holder .holder-2 nav ul li span{
     color: green;
     padding-left: 5px;
 }
 
-.right-side .side-holder .holder-2 button{
+.left-side .side-holder .holder-2 button{
     display: block;
     margin: 25px auto;
     padding: 0.8em;
     font-size: 1em;
 }
 
-/*Editing the footer section on the right sidebar*/
-.right-side .side-holder .holder-3{
+/*Editing the footer section on the left sidebar*/
+.left-side .side-holder .holder-3{
     bottom: 0;
 }
 
@@ -201,6 +202,46 @@ footer .footer-links span{
     display: none;
 }
 
+/*Styling the header section and it's overlay*/
+.recipe-header{
+    width: 100%;
+    height: 100vh;
+    background-image: url('./img_folder/pexels-ella-olsson-1640777.jpg');
+    background-size: cover;
+    position: relative;
+    border-radius: 0 0 29% 29%;
+    z-index: -2;
+}
+
+.recipe-header .overlay{
+    position: absolute;
+    background-color: var(--color-img-overlays);
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
+}
+
+/*Styling header elements*/
+
+.header-elements .form-design{
+    background-color: var(--color-pure-white);
+    display: flex;
+    height: 30%;
+    width: 35%;
+    align-items: center;
+    gap: 10px;
+    padding-left: 10px;
+    border-radius: 15px;
+    margin-top: 2rem;
+    box-shadow: var(--color-box-shadows);
+}
+
+.header-elements{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    justify-items: center;
+}
 
 .main-container {
     position: absolute;
