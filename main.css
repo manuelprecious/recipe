@@ -225,7 +225,7 @@ footer .footer-links span{
 
 /*Styling header elements*/
 
-.header-elements .form-design{
+.header-elements #form-design{
     background-color: var(--color-pure-white);
     display: flex;
     height: 30%;
@@ -267,7 +267,7 @@ footer .footer-links span{
     left: 0%;
     z-index: -1;
     display: grid;
-    transition: 500ms;
+    display: none;
 }
 
 .search-modal form {
